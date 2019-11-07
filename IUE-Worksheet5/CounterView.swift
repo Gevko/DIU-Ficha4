@@ -19,7 +19,19 @@ import UIKit
     */
 
     @IBInspectable var maxNumber: Int = 12
-    @IBInspectable var currentNumber: Int = 3
+    @IBInspectable var currentNumber: Int = 3 {
+        didSet {
+            if(currentNumber <= maxNumber) {
+                if currentNumber >=  0 {
+                    setNeedsDisplay()
+                    return
+                }
+                currentNumber = 0
+                return
+            }
+            currentNumber = maxNumber
+        }
+    }
     @IBInspectable var circleColor: UIColor = UIColor.orange
     @IBInspectable var barColor: UIColor = UIColor.systemBlue
     

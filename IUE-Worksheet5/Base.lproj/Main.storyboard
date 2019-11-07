@@ -26,9 +26,12 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="plusButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DWC-uM-80F"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blt-bK-acG" customClass="CustomButton" customModule="IUE_Worksheet5" customModuleProvider="target">
                                         <rect key="frame" x="150" y="0.0" width="100" height="100"/>
@@ -37,9 +40,13 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="IsAddButton" value="NO"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="minusButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DG2-J9-v0m"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -81,6 +88,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="XQn-5K-Oou" id="o2G-uw-5SH"/>
+                        <outlet property="counterView" destination="FLr-wH-1ma" id="JyY-Pb-0OX"/>
+                        <outlet property="minusButton" destination="blt-bK-acG" id="tHh-eb-iiJ"/>
+                        <outlet property="plusButton" destination="dl1-w7-jPW" id="JDi-sL-4H4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
