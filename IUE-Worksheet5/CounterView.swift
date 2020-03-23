@@ -26,7 +26,7 @@ import UIKit
                     setNeedsDisplay()
                     return
                 }
-                currentNumber = 0
+                currentNumber3 = 0
                 return
             }
             currentNumber = maxNumber
@@ -38,7 +38,7 @@ import UIKit
     public override func draw(_ rect: CGRect) {
         let circle = UIBezierPath(ovalIn: bounds)
         circleColor.setFill()
-        circle.fill()
+        circle.fill();
         
         let center = CGPoint(x: bounds.width/2, y: bounds.height/2)
         let startAngle: CGFloat = -.pi / 2
